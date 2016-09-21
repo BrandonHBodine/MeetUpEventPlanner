@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samples</title>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+  <h1>Samples</h1>
+
+  <h2>Sign Up</h2>
+  <form>
+
+    <div>
+      <label for="given-name">First Name</label>
+      <input name="given-name" id="given-name" type="text" autofocus required>
+    </div>
+
+    <div>
+      <label for="family-name">Last Name</label>
+      <input id="family-name" type="text" required>
+    </div>
+
+    <div>
+      <label for="email">email</label>
+      <input id="email" type="email" required>
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" minlength="8" maxlength="256" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*([!@#$%^&*_])).+$" required>
+    </div>
+
+    <pre>
+      Public biographical information (such as employer, job title, birthday, etc). This field can be optional to the user submitting the form.
+    </pre>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <h2>Create Event</h2>
+  <pre>
+    Name of the event
+    Type of the event (birthday party, conference talk, wedding, etc.)
+    Event host (could be an individual’s name or an organization)
+    Event start date and time
+    Event end date and time
+    Guest list
+    Location
+    Optional fields:
+    Optional message to the guests with additional information about the event
+  </pre>
+</body>
+
+</html>
