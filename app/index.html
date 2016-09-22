@@ -41,6 +41,20 @@
       <input id="password" type="password" minlength="8" maxlength="256" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*([!@#$%^&*_])).+$" required>
     </div>
 
+    <div> <label for="frmFavChocolate">Favorite Type of Chocolate</label>
+      <input type="text" name="fav-choc" id="frmFavChocolate" list="chocType">
+      <datalist id="chocType">
+        <option value="white">
+        <option value="milk">
+        <option value="dark">
+      </datalist>
+    </div>
+
+    <div>
+      <label for="frmAddressS">Address</label>
+      <input type="text" name="ship-address" required id="frmAddressS" placeholder="123 Any Street" autocomplete="shipping street-address">
+    </div>
+
     <pre>
       Public biographical information (such as employer, job title, birthday, etc). This field can be optional to the user submitting the form.
     </pre>
@@ -50,12 +64,12 @@
   </form>
 
   <h2>Create Event</h2>
-    <form>
-      <div>
-        <label for="event-name">Event Name</label>
-        <input id="event-name" type="text" required>
-      </div>
-    </form>
+  <form>
+    <div>
+      <label for="event-name">Event Name</label>
+      <input id="event-name" type="text" required>
+    </div>
+  </form>
   <pre>
     Type of the event (birthday party, conference talk, wedding, etc.)
     Event host (could be an individual’s name or an organization)
@@ -69,4 +83,5 @@
 
   <script src="js/main.js" type="text/javascript"></script>
 </body>
+
 </html>
