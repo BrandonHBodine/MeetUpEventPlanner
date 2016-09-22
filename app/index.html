@@ -12,7 +12,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
@@ -50,8 +50,13 @@
   </form>
 
   <h2>Create Event</h2>
+    <form>
+      <div>
+        <label for="event-name">Event Name</label>
+        <input id="event-name" type="text" required>
+      </div>
+    </form>
   <pre>
-    Name of the event
     Type of the event (birthday party, conference talk, wedding, etc.)
     Event host (could be an individual’s name or an organization)
     Event start date and time
@@ -61,6 +66,7 @@
     Optional fields:
     Optional message to the guests with additional information about the event
   </pre>
-</body>
 
+  <script src="js/main.js" type="text/javascript"></script>
+</body>
 </html>
