@@ -1,5 +1,13 @@
 # MeetUpEventPlanner
 
+Commands
+
+gulp or gulp serve
+Starts a local server and watches for scss changes
+
+gulp Building
+Builds the project creating files in the dist directory ready to deploy
+
 Meet-Up Event Planner
 Prepare for this project with Building High Conversion Web Forms and Web Tooling and Automation.
 
