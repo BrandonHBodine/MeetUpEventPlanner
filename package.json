@@ -1,7 +1,7 @@
 {
   "name": "meet-up-even-planner",
   "version": "1.0.0",
-  "description": "",
+  "description": "A beer planning app. Plan when, where, why, and the beer you will be drinking",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,8 @@
   "devDependencies": {
     "browser-sync": "^2.14.3",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.1"
   }
 }
