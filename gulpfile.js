@@ -5,6 +5,9 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var pump = require('pump');
 
+// html
+var htmlmin = require('gulp-htmlmin');
+
 // CSS
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
@@ -36,11 +39,18 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
+// Html
+gulp.task('min-html', function() {
+  return gulp.src('app/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
+});
+
 // Compress JS
 gulp.task('min-javascript', function() {
   return gulp.src('app/js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/js'));
 });
 
 // CSS
@@ -54,5 +64,5 @@ gulp.task('min-css', function() {
 });
 
 // Tasks to run
-gulp.task('build', ['min-javascript', 'min-css']);
+gulp.task('build', ['min-javascript', 'min-css', 'min-html']);
 gulp.task('default', ['serve']);
