@@ -14,6 +14,7 @@ var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 
 // JS
+var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 
 // Static Server + watching scss/html files
@@ -42,15 +43,24 @@ gulp.task('sass', function() {
 // Html
 gulp.task('min-html', function() {
   return gulp.src('app/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest('dist'));
 });
 
 // Compress JS
-gulp.task('min-javascript', function() {
-  return gulp.src('app/js/*.js')
-    // .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+gulp.task('min-javascript', function(cb) {
+  pump([
+      gulp.src('app/js/*.js'),
+      babel({
+            presets: ['es2015']
+        }),
+      uglify(),
+      gulp.dest('dist/js')
+    ],
+    cb
+  );
 });
 
 // CSS
