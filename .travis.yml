@@ -5,5 +5,7 @@ before_script:
   - npm install -g gulp
 script:
   - gulp build
+install:
+  - npm install -g firebase-tools 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
