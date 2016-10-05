@@ -42,9 +42,9 @@
 
   $('#sign-in').click( () => {
     event.preventDefault();
-    // const email = $('#email').val();
-    // const password = $('#password').val();
-    // // const promise = auth.signInWithEmailAndPassword(email, password);
+    const email = $('#email').val();
+    const password = $('#password').val();
+    const promise = auth.signInWithEmailAndPassword(email, password);
   });
 
   $('#sign-out').click( () => {
