@@ -32,61 +32,65 @@
         <h2>Plan when, where, why, and the beer you will be drinking.</h2>
       </div>
     </div>
-    <!-- Create Account -->
-    <form>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-block">
 
-    </form>
-    <!-- End Create Account -->
-    <!-- Login -->
-    <form>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">Sign Up</button>
+              <button type="button" class="btn btn-secondary">Join</button>
+            </div>
 
-    </form>
-    <!-- End Login -->
-    <form id="create">
-      <div>
-        <label for="given-name">First Name</label>
-        <input name="given-name" id="given-name" type="text" autofocus required>
+            <h4 class="card-title">Sign Up</h4>
+            <form id="create">
+              <div class="form-group">
+                <label for="given-name">First Name</label>
+                <input class="form-control" name="given-name" id="given-name" type="text" placeholder="Bill" autofocus required>
+              </div>
+
+              <div class="form-group">
+                <label for="family-name">Last Name</label>
+                <input class="form-control" id="family-name" type="text" placeholder="Gates" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">email</label>
+                <input class="form-control" id="email" type="email" placeholder="billyg@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control" id="password" type="password" minlength="8" maxlength="256" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*([!@#$%^&*_])).+$" required>
+              </div>
+
+              <div class="form-group">
+                <label for="beerType">Favorite type of beer</label>
+                <input class="form-control" type="text" name="beerType" id="beerType" list="beerTypes">
+                <datalist id="beerTypes">
+                  <option value="Ale">
+                  <option value="Pale Lagers">
+                  <option value="Dark Lager">
+                  <option value="German Bock">
+                  <option value="Pale Ale">
+                  <option value="India Pale Ale">
+                  <option value="Stout">
+                  <option value="Belgian Style">
+                  <option value="Wheat Beer">
+                  <option value="Spontanous Fermenting">
+                </datalist>
+              </div>
+
+              <button type="submit">Submit</button>
+              <button id="sign-in" name="button">Sign In</button>
+              <button type="reset">Reset</button>
+              <button id="sign-out">Sign Out</button>
+
+            </form>
+          </div>
+        </div>
       </div>
-
-      <div>
-        <label for="family-name">Last Name</label>
-        <input id="family-name" type="text" required>
-      </div>
-
-      <div>
-        <label for="email">email</label>
-        <input id="email" type="email" required>
-      </div>
-
-      <div>
-        <label for="password">Password</label>
-        <input id="password" type="password" minlength="8" maxlength="256" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*([!@#$%^&*_])).+$" required>
-      </div>
-
-      <div> <label for="frmFavChocolate">Favorite Type of Chocolate</label>
-        <input type="text" name="fav-choc" id="frmFavChocolate" list="chocType">
-        <datalist id="chocType">
-        <option value="white">
-        <option value="milk">
-        <option value="dark">
-      </datalist>
-      </div>
-
-      <div>
-        <label for="frmAddressS">Address</label>
-        <input type="text" name="ship-address" required id="frmAddressS" placeholder="123 Any Street" autocomplete="shipping street-address">
-      </div>
-
-      <pre>
-      Public biographical information (such as employer, job title, birthday, etc). This field can be optional to the user submitting the form.
-    </pre>
-
-      <button type="submit">Submit</button>
-      <button id="sign-in" name="button">Sign In</button>
-      <button type="reset">Reset</button>
-      <button id="sign-out">Sign Out</button>
-
-    </form>
+    </div>
 
     <h2>Create Event</h2>
     <form>
@@ -105,30 +109,30 @@
       Optional fields:
       Optional message to the guests with additional information about the event
     </pre>
-  </div>
+    </>
 
-  <div id="about">
-    <h3>Tech used</h3>
-    <ul>
-      <li>Travis CI</li>
-      <li>NPM</li>
-      <li>Gulp.js</li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
-  <!-- End Firebase  -->
+    <div id="about">
+      <h3>Tech used</h3>
+      <ul>
+        <li>Travis CI</li>
+        <li>NPM</li>
+        <li>Gulp.js</li>
+        <li>Bootstrap 4</li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <!-- End Firebase  -->
 
-  <!-- Bootstrap v4 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
-  <!-- End Bootstrap v4 -->
+    <!-- Bootstrap v4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+    <!-- End Bootstrap v4 -->
 
-  <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
