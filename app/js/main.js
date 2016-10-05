@@ -23,7 +23,6 @@
 
   const auth = firebase.auth();
   const preObject = document.getElementById('object');
-  const list = document.getElementById('list');
 
   const dbRef = firebase.database().ref().child('object');
   const dbRefList = dbRef.child('hobbies');
@@ -43,9 +42,9 @@
 
   $('#sign-in').click( () => {
     event.preventDefault();
-    const email = $('#email').val();
-    const password = $('#password').val();
-    const promise = auth.signInWithEmailAndPassword(email, password);
+    // const email = $('#email').val();
+    // const password = $('#password').val();
+    // // const promise = auth.signInWithEmailAndPassword(email, password);
   });
 
   $('#sign-out').click( () => {
@@ -56,7 +55,7 @@
   auth.onAuthStateChanged( firebaseUser => {
     if(firebaseUser) {
       console.log(firebaseUser);
-      console.log('Signed in!')
+      console.log('Signed in!');
     } else {
       console.log('Not logged in');
     }
