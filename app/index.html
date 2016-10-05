@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Beer Plan</title>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -12,7 +12,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
   <!-- Bootstrap v4 -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
   <!-- End Bootstrap v4 -->
@@ -20,77 +19,100 @@
 </head>
 
 <body>
-  <pre id="object">Testing</pre>
-  <list id='list'></list>
-  <h1>Beer Plan</h1>
-  <h2>Plan when, where, why, and the beer you will be drinking.</h2>
-  <form>
-
-    <div>
-      <label for="given-name">First Name</label>
-      <input name="given-name" id="given-name" type="text" autofocus required>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <pre id="object">Testing</pre>
+        <list id='list'></list>
+      </div>
     </div>
-
-    <div>
-      <label for="family-name">Last Name</label>
-      <input id="family-name" type="text" required>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="">Beer Plan</h1>
+        <h2>Plan when, where, why, and the beer you will be drinking.</h2>
+      </div>
     </div>
+    <!-- Create Account -->
+    <form>
 
-    <div>
-      <label for="email">email</label>
-      <input id="email" type="email" required>
-    </div>
+    </form>
+    <!-- End Create Account -->
+    <!-- Login -->
+    <form>
 
-    <div>
-      <label for="password">Password</label>
-      <input id="password" type="password" minlength="8" maxlength="256" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*([!@#$%^&*_])).+$" required>
-    </div>
+    </form>
+    <!-- End Login -->
+    <form id="create">
+      <div>
+        <label for="given-name">First Name</label>
+        <input name="given-name" id="given-name" type="text" autofocus required>
+      </div>
 
-    <div> <label for="frmFavChocolate">Favorite Type of Chocolate</label>
-      <input type="text" name="fav-choc" id="frmFavChocolate" list="chocType">
-      <datalist id="chocType">
+      <div>
+        <label for="family-name">Last Name</label>
+        <input id="family-name" type="text" required>
+      </div>
+
+      <div>
+        <label for="email">email</label>
+        <input id="email" type="email" required>
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input id="password" type="password" minlength="8" maxlength="256" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*([!@#$%^&*_])).+$" required>
+      </div>
+
+      <div> <label for="frmFavChocolate">Favorite Type of Chocolate</label>
+        <input type="text" name="fav-choc" id="frmFavChocolate" list="chocType">
+        <datalist id="chocType">
         <option value="white">
         <option value="milk">
         <option value="dark">
       </datalist>
-    </div>
+      </div>
 
-    <div>
-      <label for="frmAddressS">Address</label>
-      <input type="text" name="ship-address" required id="frmAddressS" placeholder="123 Any Street" autocomplete="shipping street-address">
-    </div>
+      <div>
+        <label for="frmAddressS">Address</label>
+        <input type="text" name="ship-address" required id="frmAddressS" placeholder="123 Any Street" autocomplete="shipping street-address">
+      </div>
 
-    <pre>
+      <pre>
       Public biographical information (such as employer, job title, birthday, etc). This field can be optional to the user submitting the form.
     </pre>
 
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
-  </form>
+      <button type="submit">Submit</button>
+      <button id="sign-in" name="button">Sign In</button>
+      <button type="reset">Reset</button>
+      <button id="sign-out">Sign Out</button>
 
-  <h2>Create Event</h2>
-  <form>
-    <div>
-      <label for="event-name">Event Name</label>
-      <input id="event-name" type="text" required>
-    </div>
-  </form>
-  <pre>
-    Type of the event (birthday party, conference talk, wedding, etc.)
-    Event host (could be an individual’s name or an organization)
-    Event start date and time
-    Event end date and time
-    Guest list
-    Location
-    Optional fields:
-    Optional message to the guests with additional information about the event
-  </pre>
+    </form>
 
+    <h2>Create Event</h2>
+    <form>
+      <div>
+        <label for="event-name">Event Name</label>
+        <input id="event-name" type="text" required>
+      </div>
+    </form>
+    <pre>
+      Type of the event (birthday party, conference talk, wedding, etc.)
+      Event host (could be an individual’s name or an organization)
+      Event start date and time
+      Event end date and time
+      Guest list
+      Location
+      Optional fields:
+      Optional message to the guests with additional information about the event
+    </pre>
+  </div>
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
   <!-- End Firebase  -->
 
   <!-- Bootstrap v4 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
   <!-- End Bootstrap v4 -->
 

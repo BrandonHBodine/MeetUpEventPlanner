@@ -17,8 +17,11 @@
     storageBucket: "",
     messagingSenderId: "644077528816"
   };
+
   firebase.initializeApp(config);
 
+
+  const auth = firebase.auth();
   const preObject = document.getElementById('object');
   const list = document.getElementById('list');
 
@@ -28,6 +31,36 @@
   dbRef.on('value', snap => console.log(snap.val()));
 
   dbRefList.on('child_added', snap => console.log(snap.val()));
+
+  $('#create').submit(function(event) {
+    event.preventDefault();
+    console.log('Submitted');
+    const email = $('#email').val();
+    const password = $('#password').val();
+    const promise = auth.createUserWithEmailAndPassword(email, password);
+    promise.catch( e => console.log(e.message) );
+  });
+
+  $('#sign-in').click( () => {
+    event.preventDefault();
+    const email = $('#email').val();
+    const password = $('#password').val();
+    const promise = auth.signInWithEmailAndPassword(email, password);
+  });
+
+  $('#sign-out').click( () => {
+    event.preventDefault();
+    auth.signOut();
+  });
+
+  auth.onAuthStateChanged( firebaseUser => {
+    if(firebaseUser) {
+      console.log(firebaseUser);
+      console.log('Signed in!')
+    } else {
+      console.log('Not logged in');
+    }
+  });
 
   console.log(preObject);
   console.log(dbRef);
