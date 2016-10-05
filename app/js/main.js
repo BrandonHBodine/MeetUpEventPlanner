@@ -18,7 +18,7 @@
     messagingSenderId: "644077528816"
   };
 
-  firebase.initializeApp(config);
+  firebase.initializeApp(config, "Beer Plan");
 
 
   const auth = firebase.auth();
