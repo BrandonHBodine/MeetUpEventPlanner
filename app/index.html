@@ -22,27 +22,30 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <pre id="object">Testing</pre>
+        <pre id="object"></pre>
         <list id='list'></list>
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="">Beer Plan</h1>
-        <h2>Plan when, where, why, and the beer you will be drinking.</h2>
+        <h1 class="display-2">Beer Plan</h1>
       </div>
     </div>
+
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-8">
         <div class="card">
           <div class="card-block">
-
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">Sign Up</button>
-              <button type="button" class="btn btn-secondary">Join</button>
-            </div>
-
-            <h4 class="card-title">Sign Up</h4>
+            <h4 class="card-title">Come beer with us</h4>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" id="signInShow">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="signUpShow">Sign Up</a>
+              </li>
+            </ul>
             <form id="create">
               <div class="form-group">
                 <label for="given-name">First Name</label>
@@ -81,10 +84,10 @@
                 </datalist>
               </div>
 
-              <button type="submit">Submit</button>
-              <button id="sign-in" name="button">Sign In</button>
-              <button type="reset">Reset</button>
-              <button id="sign-out">Sign Out</button>
+              <button type="submit" id="sign-up" class="btn btn-outline-primary" hidden >Sign Up</button>
+              <button id="sign-in" class="btn btn-outline-primary"  >Sign In</button>
+              <button type="reset" id="reset" class="btn btn-outline-primary" hidden >Reset</button>
+              <button id="sign-out" class="btn btn-outline-primary" hidden >Sign Out</button>
 
             </form>
           </div>

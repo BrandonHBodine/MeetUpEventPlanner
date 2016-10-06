@@ -14,11 +14,11 @@
     apiKey: "AIzaSyAA8_rAyxClFs4NLqPD22_qcyGeEdmhzAY",
     authDomain: "beer-plan.firebaseapp.com",
     databaseURL: "https://beer-plan.firebaseio.com",
-    storageBucket: "",
+    storageBucket: "beer-plan.appspot.com",
     messagingSenderId: "644077528816"
   };
 
-  firebase.initializeApp(config, "Beer Plan");
+  firebase.initializeApp(config);
 
 
   const auth = firebase.auth();
@@ -59,6 +59,26 @@
     } else {
       console.log('Not logged in');
     }
+  });
+
+  // Click events
+  $('#signUpShow').click(  () => {
+    $('#signUpShow').toggleClass('active');
+    $('#signInShow').toggleClass('active');
+
+    $('#sign-up').removeAttr('hidden');
+    $('#reset').removeAttr('hidden');
+
+    $('#sign-in').attr('hidden', 'true');
+  });
+
+  $('#signInShow').click( () => {
+
+    $('#signUpShow').toggleClass('active');
+    $('#signInShow').toggleClass('active');
+
+    
+
   });
 
   console.log(preObject);
