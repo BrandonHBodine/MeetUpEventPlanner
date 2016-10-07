@@ -47,29 +47,30 @@
               </li>
             </ul>
             <form id="create">
-              <div class="form-group">
+
+              <div class="form-group sign-up-group" hidden>
                 <label for="given-name">First Name</label>
-                <input class="form-control" name="given-name" id="given-name" type="text" placeholder="Bill" autofocus required>
+                <input class="form-control sign-up-control" name="given-name" id="given-name" type="text" placeholder="Bill" autofocus required disabled>
               </div>
 
-              <div class="form-group">
+              <div class="form-group sign-up-group" hidden>
                 <label for="family-name">Last Name</label>
-                <input class="form-control" id="family-name" type="text" placeholder="Gates" required>
+                <input class="form-control sign-up-control" id="family-name" type="text" placeholder="Gates" required disabled hidden>
               </div>
 
-              <div class="form-group">
+              <div class="form-group email-group">
                 <label for="email">email</label>
                 <input class="form-control" id="email" type="email" placeholder="billyg@example.com" required>
               </div>
 
-              <div class="form-group">
+              <div class="form-group password-group">
                 <label for="password">Password</label>
                 <input class="form-control" id="password" type="password" minlength="8" maxlength="256" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*([!@#$%^&*_])).+$" required>
               </div>
 
-              <div class="form-group">
+              <div class="form-group sign-up-group" hidden>
                 <label for="beerType">Favorite type of beer</label>
-                <input class="form-control" type="text" name="beerType" id="beerType" list="beerTypes">
+                <input class="form-control sign-up-control" type="text" name="beerType" id="beerType" list="beerTypes" disabled>
                 <datalist id="beerTypes">
                   <option value="Ale">
                   <option value="Pale Lagers">
@@ -84,10 +85,10 @@
                 </datalist>
               </div>
 
-              <button type="submit" id="sign-up" class="btn btn-outline-primary" hidden >Sign Up</button>
-              <button id="sign-in" class="btn btn-outline-primary"  >Sign In</button>
-              <button type="reset" id="reset" class="btn btn-outline-primary" hidden >Reset</button>
-              <button id="sign-out" class="btn btn-outline-primary" hidden >Sign Out</button>
+              <button type="submit" id="sign-up" class="btn btn-outline-primary sign-up-group" hidden >Sign Up</button>
+              <button id="sign-in" class="btn btn-outline-primary" >Sign In</button>
+              <button type="reset" id="reset" class="btn btn-outline-primary" >Reset</button>
+              <button id="sign-out" class="btn btn-outline-primary">Sign Out</button>
 
             </form>
           </div>

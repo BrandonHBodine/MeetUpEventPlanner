@@ -66,7 +66,7 @@
     $('#signUpShow').toggleClass('active');
     $('#signInShow').toggleClass('active');
 
-    $('#sign-up').removeAttr('hidden');
+    $('.sign-up-group').removeAttr('hidden');
     $('#reset').removeAttr('hidden');
 
     $('#sign-in').attr('hidden', 'true');
@@ -77,7 +77,7 @@
     $('#signUpShow').toggleClass('active');
     $('#signInShow').toggleClass('active');
 
-    
+    $('.sign-up-group').attr('hidden', true);
 
   });
 
