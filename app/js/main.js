@@ -63,21 +63,34 @@
 
   // Click events
   $('#signUpShow').click(  () => {
+    //Change button classes
     $('#signUpShow').toggleClass('active');
     $('#signInShow').toggleClass('active');
 
+    // Show sign up group
     $('.sign-up-group').removeAttr('hidden');
     $('#reset').removeAttr('hidden');
 
+    // Re-enable sign up input
+    $('.sign-up-control').removeAttr('disabled');
+
+    // hide sign in
     $('#sign-in').attr('hidden', 'true');
   });
 
   $('#signInShow').click( () => {
-
+    //Change button classes
     $('#signUpShow').toggleClass('active');
     $('#signInShow').toggleClass('active');
 
+    // Show sign in button
+    $('#sign-in').removeAttr('hidden');
+
+    // Hide sign up
     $('.sign-up-group').attr('hidden', true);
+
+    // Disable Inputs
+    $('.sign-up-control').attr('disabled', true);
 
   });
 
