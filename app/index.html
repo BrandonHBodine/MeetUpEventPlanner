@@ -29,12 +29,12 @@
 
     <div class="row">
       <div class="col-sm-12">
-        <h1 class="display-2">Beer Plan</h1>
+        <h1 class="display-3">Beer Plan</h1>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-sm-12">
         <div class="card">
           <div class="card-block">
             <h4 class="card-title">Come beer with us</h4>
@@ -59,7 +59,7 @@
               </div>
 
               <div class="form-group email-group">
-                <label for="email">email</label>
+                <label for="email">Email</label>
                 <input class="form-control" id="email" type="email" placeholder="billyg@example.com" required>
               </div>
 
@@ -85,9 +85,9 @@
                 </datalist>
               </div>
 
-              <button type="submit" id="sign-up" class="btn btn-outline-primary sign-up-group" hidden >Sign Up</button>
-              <button id="sign-in" class="btn btn-outline-primary" >Sign In</button>
-              <button type="reset" id="reset" class="btn btn-outline-primary" >Reset</button>
+              <button type="submit" id="sign-up" class="btn btn-outline-primary sign-up-group" hidden>Sign Up</button>
+              <button id="sign-in" class="btn btn-outline-primary">Sign In</button>
+              <button type="reset" id="reset" class="btn btn-outline-primary">Reset</button>
               <button id="sign-out" class="btn btn-outline-primary" hidden>Sign Out</button>
 
             </form>
@@ -96,23 +96,55 @@
       </div>
     </div>
 
-    <h2>Create Event</h2>
-    <form>
-      <div>
-        <label for="event-name">Event Name</label>
-        <input id="event-name" type="text" required>
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Come beer with us</h4>
+        <form>
+          <div class="form-group">
+            <label for="event-name">Event Name</label>
+            <input id="event-name" class="form-control" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="event-host">Host</label>
+            <input id="event-host" class="form-control" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="event-name">Event Name</label>
+            <input id="event-name" class="form-control" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="event-start">Event Start</label>
+            <input id="event-start" class="form-control" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="event-end">Event End</label>
+            <input id="event-end" class="form-control" type="text" required>
+          </div>
+
+
+          <div class="form-group">
+            <label for="event-location">Location</label>
+            <input id="event-location" class="form-control" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="event-message">Desciption/Message</label>
+            <input id="event-message" class="form-control" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="event-guests">Guests</label>
+            <input id="event-guests" class="form-control" type="text" required>
+          </div>
+
+        </form>
+
       </div>
-    </form>
-    <pre>
-      Type of the event (birthday party, conference talk, wedding, etc.)
-      Event host (could be an individual’s name or an organization)
-      Event start date and time
-      Event end date and time
-      Guest list
-      Location
-      Optional fields:
-      Optional message to the guests with additional information about the event
-    </pre>
+    </div>
 
     <div id="about">
       <h3>Tech used</h3>
