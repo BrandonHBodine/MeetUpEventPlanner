@@ -3,3 +3,6 @@ input:invalid {
 
 input:valid {
   border: 1px solid green; }
+
+.navbar-brand {
+  font-size: 2em; }

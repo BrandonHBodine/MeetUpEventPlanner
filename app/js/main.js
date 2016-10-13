@@ -55,9 +55,31 @@
   auth.onAuthStateChanged( firebaseUser => {
     if(firebaseUser) {
       console.log(firebaseUser);
+
+      // hide sign-out button
+      $('#sign-out').removeAttr('hidden');
+
+      //Hide sign-in / sign-up card
+      $('#auth-card').attr('hidden', 'true');
+
+      // Show event-card
+      $('#event-card').removeAttr('hidden');
+
       console.log('Signed in!');
+
     } else {
+
+      // Show sign-out button
+      $('#sign-out').attr('hidden', 'true');
+
+      // Show sign-in / sign-up card
+      $('#auth-card').removeAttr('hidden');
+
+      // Hide event card
+      $('#event-card').attr('hidden', 'true');
+
       console.log('Not logged in');
+
     }
   });
 
@@ -104,4 +126,5 @@
   }
 
   insertDate();
+
 })();

@@ -29,14 +29,15 @@
       </h1>
 
       <form class="form-inline pull-xs-right">
-        <button id="sign-out" class="btn btn-outline-primary text-right-xs">Sign Out</button>
+        <button id="sign-out" class="btn btn-outline-primary text-right-xs" hidden>Sign Out</button>
       </form>
     </nav>
     <!-- End Navigation -->
 
     <div class="row">
       <div class="col-sm-12">
-        <div class="card">
+
+        <div id="auth-card" class="card">
           <div class="card-block">
             <h4 class="card-title">Come beer with us</h4>
             <ul class="nav nav-tabs">
@@ -92,60 +93,68 @@
             </form>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-block">
-        <h4 class="card-title">Create a beer meetup!</h4>
-        <form>
-          <div class="form-group">
-            <label for="event-name">Event Name</label>
-            <input id="event-name" class="form-control" type="text" placeholder="Bill's Birthday Bash!" required>
-          </div>
-
-          <div class="form-group">
-            <label for="event-host">Host</label>
-            <input id="event-host" class="form-control" type="text" placeholder="Bill Gates" required>
-          </div>
-
-          <div class="form-group">
-            <label for="event-type">Event Type</label>
-            <input id="event-type" class="form-control" type="text" placeholder="Social Gathering" required>
-          </div>
-
-          <div class="form-group">
-            <label for="event-start">Event Start</label>
-            <input id="event-start" class="form-control" type="datetime-local" value="" required>
-          </div>
-
-          <div class="form-group">
-            <label for="event-end">Event End</label>
-            <input id="event-end" class="form-control" type="datetime-local" value="" required>
-          </div>
-
-
-          <div class="form-group">
-            <label for="event-location">Location</label>
-            <input id="event-location" class="form-control" type="text" placeholder="Space Needle" required>
-          </div>
-
-          <div class="form-group">
-            <label for="event-message">Desciption/Message</label>
-            <input id="event-message" class="form-control" type="text" placeholder="Come celbrate Bill's Birthday with Belgian Beer!" required>
-          </div>
-
-          <div class="form-group">
-            <label for="event-guests">Guests</label>
-            <input id="event-guests" class="form-control" type="text" required>
-          </div>
-
-        </form>
 
       </div>
     </div>
 
-    <div id="about">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div id="event-card" class="card" hidden="true">
+          <div class="card-block">
+
+            <h4 class="card-title">Create a beer meetup!</h4>
+
+            <form>
+              <div class="form-group">
+                <label for="event-name">Event Name</label>
+                <input id="event-name" class="form-control" type="text" placeholder="Bill's Birthday Bash!" required>
+              </div>
+
+              <div class="form-group">
+                <label for="event-host">Host</label>
+                <input id="event-host" class="form-control" type="text" placeholder="Bill Gates" required>
+              </div>
+
+              <div class="form-group">
+                <label for="event-type">Event Type</label>
+                <input id="event-type" class="form-control" type="text" placeholder="Social Gathering" required>
+              </div>
+
+              <div class="form-group">
+                <label for="event-start">Event Start</label>
+                <input id="event-start" class="form-control" type="datetime-local" value="" required>
+              </div>
+
+              <div class="form-group">
+                <label for="event-end">Event End</label>
+                <input id="event-end" class="form-control" type="datetime-local" value="" required>
+              </div>
+
+
+              <div class="form-group">
+                <label for="event-location">Location</label>
+                <input id="event-location" class="form-control" type="text" placeholder="Space Needle" required>
+              </div>
+
+              <div class="form-group">
+                <label for="event-message">Desciption/Message</label>
+                <input id="event-message" class="form-control" type="text" placeholder="Come celbrate Bill's Birthday with Belgian Beer!" required>
+              </div>
+
+              <div class="form-group">
+                <label for="event-guests">Guests</label>
+                <input id="event-guests" class="form-control" type="text" required>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="about" hidden>
       <h3>Tech used</h3>
       <ul>
         <li>Travis CI</li>
@@ -154,6 +163,7 @@
         <li>Bootstrap 4</li>
       </ul>
     </div>
+
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
     <!-- End Firebase  -->
