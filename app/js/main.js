@@ -96,4 +96,12 @@
 
   console.log(preObject);
   console.log(dbRef);
+
+  function insertDate() {
+    let dateString = (new Date()).toJSON().replace(/\.\d\d\dZ/,'');
+    $('#event-end').attr('value', dateString);
+    $('#event-start').attr('value', dateString);
+  }
+
+  insertDate();
 })();
