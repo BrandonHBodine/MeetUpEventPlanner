@@ -19,19 +19,20 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <pre id="object"></pre>
-        <list id='list'></list>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <h1 class="display-3">Beer Plan</h1>
-      </div>
-    </div>
+  <div class="container">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light">
+      <h1 class="navbar-brand">
+        Beer Plan
+      </h1>
+
+      <form class="form-inline pull-xs-right">
+        <button id="sign-out" class="btn btn-outline-primary text-right-xs">Sign Out</button>
+      </form>
+    </nav>
+    <!-- End Navigation -->
 
     <div class="row">
       <div class="col-sm-12">
@@ -88,8 +89,6 @@
               <button type="submit" id="sign-up" class="btn btn-outline-primary sign-up-group" hidden>Sign Up</button>
               <button id="sign-in" class="btn btn-outline-primary">Sign In</button>
               <button type="reset" id="reset" class="btn btn-outline-primary">Reset</button>
-              <button id="sign-out" class="btn btn-outline-primary" hidden>Sign Out</button>
-
             </form>
           </div>
         </div>
@@ -98,7 +97,7 @@
 
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title">Come beer with us</h4>
+        <h4 class="card-title">Create a beer meetup!</h4>
         <form>
           <div class="form-group">
             <label for="event-name">Event Name</label>
@@ -153,8 +152,6 @@
         <li>NPM</li>
         <li>Gulp.js</li>
         <li>Bootstrap 4</li>
-        <li></li>
-        <li></li>
       </ul>
     </div>
     <!-- Firebase -->
