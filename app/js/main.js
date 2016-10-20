@@ -127,4 +127,7 @@
 
   insertDate();
 
+  // Map
+  Let key = 'AIzaSyAA8_rAyxClFs4NLqPD22_qcyGeEdmhzAY';
+
 })();
