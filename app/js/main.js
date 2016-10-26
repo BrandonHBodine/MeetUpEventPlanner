@@ -128,6 +128,6 @@
   insertDate();
 
   // Map
-  let key = 'AIzaSyAA8_rAyxClFs4NLqPD22_qcyGeEdmhzAY';
+  let key = 'AIzaSyAjRh-IO7aUkGdznLPKIS2sdkP4lwJcxYg';
 
 })();
